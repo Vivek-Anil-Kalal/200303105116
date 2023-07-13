@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { login } from '../controllers/appControllers'
 
 const Login = () => {
+  const [data, setData] = useState({});
+
   return (
     <div className="w-full flex justify-center items-center mt-5">
       {/* Login Card */}
@@ -14,7 +17,8 @@ const Login = () => {
 
           <div className="w-full flex gap-3 p-2 justify-between items-center">
             <h1>Company Name : </h1>
-            <input type="text" placeholder="Enter Company Name" className="flex-1 md:max-w-[250px] max-w-[200px] outline-none pl-2 font-semibold text-blue-600 border-2 border-opacity-40 border-blue-900 rounded-lg p-1 " />
+            <input type="text" placeholder="Enter Company Name" 
+            className="flex-1 md:max-w-[250px] max-w-[200px] outline-none pl-2 font-semibold text-blue-600 border-2 border-opacity-40 border-blue-900 rounded-lg p-1 " />
           </div>
           <div className="w-full flex gap-3 p-2 justify-between items-center">
             <h1>Owner Name : </h1>
@@ -31,9 +35,10 @@ const Login = () => {
         </div>
 
         <div className="w-full p-4 flex justify-center items-center">
-          <button className="px-2 min-w-[150px] py-2 rounded-lg font-semibold text-lg text-white bg-blue-500">Login</button>
+          <button className="px-2 min-w-[150px] py-2 rounded-lg font-semibold text-lg text-white bg-blue-500"
+            onClick={login}
+          >Login</button>
         </div>
-
       </div>
     </div>
   )
