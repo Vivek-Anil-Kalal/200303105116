@@ -1,7 +1,11 @@
+import { Navbar, Home } from "./scenes";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World</h1>
+      <div className="w-full">
+        <Navbar />
+      </div>
     </div>
   );
 }

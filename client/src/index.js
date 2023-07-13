@@ -2,11 +2,30 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
+import {
+  Register,
+  FindTrain,
+  GetTrains,
+  Login,
+  Home, } from './scenes' 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+
+    <BrowserRouter>
+      <App />
+
+      {/* Routes */}
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route path="/auth" Component={Login} />
+        <Route path="/register" Component={Register} />
+        <Route path="/findtrain" Component={FindTrain} />
+        <Route path="/gettrains" Component={GetTrains} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
