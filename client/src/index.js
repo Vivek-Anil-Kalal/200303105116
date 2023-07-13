@@ -19,7 +19,7 @@ root.render(
 
       {/* Routes */}
       <Routes>
-        <Route exact path="/" Component={Home} />
+        <Route exact path="/" Component={Login} />
         <Route path="/auth" Component={Login} />
         <Route path="/register" Component={Register} />
         <Route path="/findtrain" Component={FindTrain} />
